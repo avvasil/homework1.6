@@ -2,6 +2,8 @@ package pro.sky;
 
 public class Main {
 
+    static int[] arr = generateRandomArray();
+
     public static void main(String[] args) {
 	
         //task1
@@ -24,7 +26,7 @@ public class Main {
         }
         System.out.println("Минимальная сумма трат за день составила " + minSpendingPerDay + " рублей.");
 
-        for (int i = 0; i <= arr.length - 1; i++) {
+        for (int i = 0; i < arr.length; i++) {
             if (arr[i] > maxSpendingPerDay)
                 maxSpendingPerDay = arr[i];
         }
@@ -45,7 +47,7 @@ public class Main {
         }
     }
 
-    static int[] arr = generateRandomArray();
+
     public static int[] generateRandomArray() {
         java.util.Random random = new java.util.Random();
         int[] arr = new int[30];
